@@ -1,5 +1,6 @@
 import React, { Suspense, useState } from 'react'
 import { VEDAContentEditor } from 'dev-veda-content-editor'
+import 'dev-veda-content-editor/style.css'
 
 
 const initialContent = `# Hello from VEDA Editor
@@ -54,6 +55,11 @@ function App() {
               setContent(newContent)
             }}
             placeholder="Start typing..."
+            vedaConfig={{
+              envMapboxToken: import.meta.env.VITE_MAPBOX_TOKEN || 'pk.eyJ1IjoiY292aWQtbmFzYSIsImEiOiJjbGNxaWdqdXEwNjJnM3VuNDFjM243emlsIn0.NLbvgae00NUD5K64CD6ZyA',
+              envApiStacEndpoint: import.meta.env.VITE_API_STAC_ENDPOINT || 'https://earth.gov/ghgcenter/api/stac',
+              envApiRasterEndpoint: import.meta.env.VITE_API_RASTER_ENDPOINT || 'https://earth.gov/ghgcenter/api/raster',
+            }}
           />
 
         </div>
