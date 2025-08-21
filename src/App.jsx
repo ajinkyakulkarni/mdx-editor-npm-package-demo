@@ -23,6 +23,13 @@ console.log('Hello, VEDA!')
 function App() {
   const [content, setContent] = useState(initialContent)
   const [error, setError] = useState(null)
+  
+  const vedaConfigData = {
+    envMapboxToken: import.meta.env.VITE_MAPBOX_TOKEN || '',
+    envApiStacEndpoint: import.meta.env.VITE_API_STAC_ENDPOINT || '',
+    envApiRasterEndpoint: import.meta.env.VITE_API_RASTER_ENDPOINT || '',
+  };
+  
   try {
     return (
       <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
@@ -55,11 +62,7 @@ function App() {
               setContent(newContent)
             }}
             placeholder="Start typing..."
-            vedaConfig={{
-              envMapboxToken: import.meta.env.VITE_MAPBOX_TOKEN || 'pk.eyJ1IjoiY292aWQtbmFzYSIsImEiOiJjbGNxaWdqdXEwNjJnM3VuNDFjM243emlsIn0.NLbvgae00NUD5K64CD6ZyA',
-              envApiStacEndpoint: import.meta.env.VITE_API_STAC_ENDPOINT || 'https://earth.gov/ghgcenter/api/stac',
-              envApiRasterEndpoint: import.meta.env.VITE_API_RASTER_ENDPOINT || 'https://earth.gov/ghgcenter/api/raster',
-            }}
+            vedaConfig={vedaConfigData}
           />
 
         </div>
