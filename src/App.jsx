@@ -26,14 +26,16 @@ function App() {
   };
   
   return (
-    <VEDAContentEditor
-      value={initialContent}
-      onChange={(newContent) => {
-        console.log('Content changed:', newContent)
-      }}
-      placeholder="Start typing..."
-      vedaConfig={vedaConfigData}
-    />
+    <div style={{ width: '100%', height: '100vh', padding: 0, margin: 0 }}>
+      <VEDAContentEditor
+        value={initialContent}
+        onChange={(newContent) => {
+          console.log('Content changed:', newContent)
+        }}
+        placeholder="Start typing..."
+        vedaConfig={vedaConfigData}
+      />
+    </div>
   )
 }
 
