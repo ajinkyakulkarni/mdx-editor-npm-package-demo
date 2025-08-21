@@ -29,11 +29,14 @@
     "react-dom": "18.2.0",
     "react-router-dom": "^7.7.1",
     "styled-components": "^5.3.6",
-    "sugar-high": "^0.6.0"
+    "sugar-high": "^0.6.0",
+    "veda-content-editor": "^0.1.0"
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@vitejs/plugin-react": "^4.5.0",
     "buffer": "^6.0.3",
     "process": "^0.11.10",

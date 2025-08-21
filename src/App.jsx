@@ -1,5 +1,5 @@
-import { VEDAContentEditor } from 'dev-veda-content-editor'
-import 'dev-veda-content-editor/style.css'
+import { VEDAContentEditor } from 'veda-content-editor'
+import 'veda-content-editor/style.css'
 
 const initialContent = `# Hello from VEDA Editor
 
