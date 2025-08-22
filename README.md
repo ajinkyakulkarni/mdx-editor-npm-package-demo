@@ -114,12 +114,19 @@ The VEDA Content Editor includes:
 
 This demo uses the `veda-content-editor` npm package:
 - NPM: https://www.npmjs.com/package/veda-content-editor
-- Version: 0.1.0
+- GitHub: https://github.com/ajinkyakulkarni/veda-content-editor
+- Version: 0.1.3 (unminified for debugging)
 
 To use in your own project:
 ```bash
-npm install veda-content-editor
+npm install veda-content-editor@^0.1.3
 ```
+
+### Latest Version Features (0.1.3)
+- Completely unminified code for easier debugging
+- Bundled @teamimpact/veda-ui library (also unminified)
+- Inline source maps for better debugging experience
+- Full readable source code in Chrome DevTools
 
 ## License
 
